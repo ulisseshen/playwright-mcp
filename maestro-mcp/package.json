@@ -1,7 +1,7 @@
 {
   "name": "@maestro/mcp",
   "version": "0.0.1",
-  "description": "Maestro Tools for MCP - Flutter and Mobile App Automation",
+  "description": "Unified Testing MCP - Playwright + Maestro for Web, Flutter, and Mobile Automation",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/microsoft/playwright-mcp.git",
@@ -30,6 +30,8 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.17.5",
+    "playwright": "1.57.0-alpha-2025-11-07",
+    "playwright-core": "1.57.0-alpha-2025-11-07",
     "yaml": "^2.6.1"
   },
   "bin": {
@@ -43,8 +45,10 @@
   "keywords": [
     "mcp",
     "maestro",
+    "playwright",
     "flutter",
     "mobile",
+    "web",
     "testing",
     "automation",
     "e2e"

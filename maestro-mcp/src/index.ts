@@ -14,7 +14,11 @@
  * limitations under the License.
  */
 
-export { MaestroMCPServer, createConnection } from './server';
+// Export Playwright's createConnection as the main entry point
+export { createConnection } from 'playwright/lib/mcp/index';
+
+// Also export Maestro-only server for those who want it
+export { MaestroMCPServer, createConnection as createMaestroConnection } from './server';
 export { MaestroClient } from './maestro';
 export * from './types';
 export * from './tools';

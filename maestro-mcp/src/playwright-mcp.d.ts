@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /**
  * Copyright (c) Microsoft Corporation.
  *
@@ -15,17 +14,14 @@
  * limitations under the License.
  */
 
-// Use Playwright's program with Maestro extensions
-const { program } = require('playwright-core/lib/utilsBundle');
-const { decorateCommand } = require('playwright/lib/mcp/program');
+declare module 'playwright/lib/mcp/index' {
+  export function createConnection(config?: any): Promise<any>;
+}
 
-const packageJSON = require('../package.json');
+declare module 'playwright/lib/mcp/program' {
+  export function decorateCommand(program: any, version: string): void;
+}
 
-// Create program with Playwright's MCP command
-const p = program
-  .version('Version ' + packageJSON.version)
-  .name('Unified Testing MCP (Playwright + Maestro)');
-
-decorateCommand(p, packageJSON.version);
-
-void program.parseAsync(process.argv);
+declare module 'playwright-core/lib/utilsBundle' {
+  export const program: any;
+}
