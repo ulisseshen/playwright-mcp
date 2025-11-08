@@ -1,0 +1,52 @@
+{
+  "name": "@maestro/mcp",
+  "version": "0.0.1",
+  "description": "Maestro Tools for MCP - Flutter and Mobile App Automation",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/microsoft/playwright-mcp.git",
+    "directory": "maestro-mcp"
+  },
+  "homepage": "https://maestro.mobile.dev",
+  "engines": {
+    "node": ">=18"
+  },
+  "author": {
+    "name": "Microsoft Corporation"
+  },
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint src/**/*.ts",
+    "test": "echo 'Tests coming soon'",
+    "prepublishOnly": "npm run build"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.5",
+    "yaml": "^2.6.1"
+  },
+  "bin": {
+    "mcp-server-maestro": "dist/cli.js"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "typescript": "^5.7.2"
+  },
+  "peerDependencies": {},
+  "keywords": [
+    "mcp",
+    "maestro",
+    "flutter",
+    "mobile",
+    "testing",
+    "automation",
+    "e2e"
+  ]
+}
