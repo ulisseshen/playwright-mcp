@@ -35,7 +35,7 @@
     "yaml": "^2.6.1"
   },
   "bin": {
-    "mcp-server-maestro": "dist/cli.js"
+    "mcp-server-maestro": "cli.js"
   },
   "devDependencies": {
     "@types/node": "^24.3.0",
